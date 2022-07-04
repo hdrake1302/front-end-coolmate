@@ -14,13 +14,13 @@
 }
 
 .header:hover .header__navbar {
-  background-color: var(--primary-background-color);
+  background-color: var(--primary-yellow-color);
 }
 
 /* Header - Topbar */
 .header__topbar {
   text-align: center;
-  background-color: var(--primary-background-color);
+  background-color: var(--primary-yellow-color);
   height: var(--topbar-height);
   line-height: var(--topbar-height);
 
@@ -118,7 +118,7 @@
 
 /* Heading - Subnav */
 .submenu {
-  display: none;
+  /* display: none; */
   background-color: var(--white-color);
   position: fixed;
   top: var(--header-height);
@@ -209,7 +209,7 @@
 }
 
 .submenu__link:hover {
-  color: #2f5acf !important;
+  color: var(--primary-blue-color);
 }
 .submenu__link-desc {
   display: block;

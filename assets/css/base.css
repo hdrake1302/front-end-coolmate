@@ -4,10 +4,11 @@
 :root {
   --text-color: #231f20;
   --secondary-color: #8e8e8e;
-  --primary-background-color: #f9f86c;
   --primary-color: #ff3906;
   --white-color: #fff;
 
+  --primary-yellow-color: #f9f86c;
+  --primary-blue-color: #2f5acf;
   --header-height: 82px;
   --topbar-height: 32px;
 
@@ -23,4 +24,24 @@ html {
   line-height: 1.6rem;
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
+}
+
+.tag {
+  padding: 2px 8px;
+  margin-left: 8px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 900;
+
+  border-radius: 6px;
+}
+
+.tag.tag--hot {
+  color: var(--text-color);
+  background-color: var(--primary-yellow-color) !important;
+}
+
+.tag.tag--new {
+  color: var(--white-color);
+  background-color: var(--primary-blue-color) !important;
 }
