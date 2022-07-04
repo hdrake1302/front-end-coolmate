@@ -118,7 +118,7 @@
 
 /* Heading - Subnav */
 .submenu {
-  /* display: none; */
+  display: none;
   background-color: var(--white-color);
   position: fixed;
   top: var(--header-height);
