@@ -1,0 +1,117 @@
+/* Wrapper */
+.homepage {
+}
+
+/* Header */
+.header {
+  font-size: 1.3rem;
+  height: var(--header-height);
+}
+
+.header:hover .header__topbar {
+  background-color: #ddd;
+}
+
+.header:hover .header__navbar {
+  background-color: var(--primary-background-color);
+}
+
+/* Header - Topbar */
+.header__topbar {
+  text-align: center;
+  background-color: var(--primary-background-color);
+  height: var(--topbar-height);
+  line-height: var(--topbar-height);
+
+  transition: background-color ease-in 0.3s;
+}
+
+.header__topbar-link {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+/* Header - Navbar */
+.header__navbar {
+  height: var(--navbar-height);
+  background-color: var(--white-color);
+
+  transition: background-color ease-in 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 64px;
+  border-bottom: 1px solid #e1e7e8;
+}
+
+.header__navbar-logo {
+  height: 36px;
+}
+
+.header__navbar-img {
+  width: 100%;
+  height: 100%;
+}
+
+.header__navbar-list {
+  display: flex;
+  margin: 0;
+
+  list-style-type: none;
+}
+
+.header__navbar-item--has-child {
+  position: relative;
+}
+
+.header__navbar-item:hover .header__navbar-item-link {
+  color: var(--secondary-color);
+}
+
+.header__navbar-item--active .header__navbar-item-link,
+.header__navbar-item--active .header__navbar-item-link:hover {
+  color: var(--primary-color);
+}
+
+.header__navbar-item-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 700;
+  padding: 0 30px;
+
+  line-height: var(--navbar-height);
+}
+
+.header__navbar-action {
+}
+
+.header__navbar-icon {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.header__navbar-icon:not(:first-child) {
+  margin-left: 20px;
+}
+
+/* Heading - Subnav */
+.subnav-category {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.subnav-category-wrap {
+  background-color: var(--white-color);
+  padding: 16px 0 24px;
+}
+
+.subnav-category__heading {
+  margin: 0;
+}
