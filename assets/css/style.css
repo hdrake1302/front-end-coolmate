@@ -279,7 +279,7 @@
 }
 
 .header__navbar-btn-menu {
-  display: none;
+  /* display: none; */
   position: absolute;
   top: calc(var(--navbar-height) - 100% + 8px);
   right: 0;
@@ -334,6 +334,10 @@
 
 .header__navbar-cart {
   width: 380px;
+  padding: 16px;
+  font-size: 1.4rem;
+
+  color: var(--text-color);
 }
 
 .header__navbar-counts {
@@ -355,16 +359,106 @@
   color: var(--white-color);
   background-color: var(--primary-blue-color);
 }
+
+.header__navbar-cart--no-item * {
+  display: none;
+}
+
 .header__navbar-cart--no-item .header__navbar-cart-no-item-msg {
   display: inline-block;
 }
 
 .header__navbar-cart-no-item-msg {
   display: none;
-  font-size: 1.4rem;
   font-weight: 400;
 }
 
+/* Header navbar cart with item */
+.header__navbar-cart-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__navbar-cart-total {
+}
+
+.header__navbar-cart-more {
+  text-decoration: none;
+  color: var(--primary-blue-color);
+}
+
+.header__navbar-cart-body {
+}
+
+.header__navbar-cart-list {
+  padding: 0;
+  list-style: none;
+}
+
+.header__navbar-cart-item {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.header__navbar-cart-remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.header__navbar-cart-remove:hover {
+  cursor: pointer;
+}
+
+.header__navbar-cart-thumbnail {
+  width: 216px;
+  height: auto;
+}
+
+.header__navbar-cart-img {
+  max-width: 100%;
+  border-radius: 18px;
+}
+
+.header__navbar-cart-content {
+  position: relative;
+
+  text-align: left;
+  padding-right: 20px;
+  margin: 16px 0 16px 16px;
+  font-size: 1.3rem;
+  font-weight: 500;
+
+  color: var(--text-color);
+}
+
+.header__navbar-cart-title {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 900;
+}
+
+.header__navbar-cart-size {
+  margin-top: 4px;
+}
+
+.header__navbar-cart-price {
+  margin: 10px 0 4px;
+}
+
+.header__navbar-cart-price-current {
+  font-size: 1.7rem;
+}
+
+.header__navbar-cart-price-old {
+  font-size: 1.2rem;
+  color: #cecece;
+  text-decoration: line-through;
+}
+
+.header__navbar-cart-quantity {
+  font-size: 1.2rem;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
