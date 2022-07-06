@@ -54,22 +54,32 @@ html {
 /* Select */
 .custom-select {
   --border-radius: 16px;
+  --height: 38px;
+  --padding-left-right: 16px;
+
   position: relative;
   font-size: 1.3rem;
 
-  min-width: 150px;
+  min-width: 156px;
+  height: var(--height);
   font-weight: 400;
-  z-index: 3;
-  line-height: 4rem;
+  z-index: 1;
+  line-height: 2rem;
+  user-select: none;
 }
 
 .select-selected {
+  position: relative;
+  display: block;
   width: 100%;
+  line-height: var(--height);
   border: 1px solid var(--border-color);
   background-color: var(--white-color);
 
   border-radius: var(--border-radius);
-  padding: 0px 12px 0;
+  padding: 0px var(--padding-left-right) 0;
+
+  transition: background-color linear 0.2s;
 }
 
 .select-selected:hover {
@@ -80,9 +90,12 @@ html {
   top: 0;
   right: 8px;
   font-size: 1.2rem;
+
+  transition: transform linear 0.2s;
 }
 
 .select-items {
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -90,15 +103,38 @@ html {
 
   background-color: var(--white-color);
   border: 1px solid var(--border-color);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  overflow: hidden;
 
-  border-top-color: transparent;
-  border-radius: var(--border-radius);
   list-style: none;
-  margin: 0;
-  padding: 20px 12px 0;
+  padding: 20px 0 0;
   margin-top: -20px;
   z-index: -1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  animation: fadeIn linear 0.2s;
 }
 
 .select-items__item {
+  padding: 8px var(--padding-left-right);
+}
+
+.select-items__item:hover {
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+
+/* Select click to show */
+
+.select-hidden:checked ~ .select-items {
+  display: block;
+}
+
+.select-hidden:checked ~ .select-selected {
+  background-color: #d9d9d9;
+}
+
+.select-hidden:checked ~ .select-selected .select-icon {
+  transform: rotate(180deg);
 }

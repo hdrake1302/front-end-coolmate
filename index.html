@@ -509,12 +509,18 @@
             <div class="content__sort-wrap">
               <div class="content__sort-heading">Sản phẩm</div>
               <div class="custom-select">
-                <div class="select-selected">
+                <input
+                  id="select-hidden"
+                  type="checkbox"
+                  hidden
+                  class="select-hidden"
+                />
+                <label for="select-hidden" class="select-selected">
                   Sắp xếp
                   <span class="select-icon">
                     <i class="fa-solid fa-angle-down"></i>
                   </span>
-                </div>
+                </label>
 
                 <ul class="select-items">
                   <li class="select-items__item">Mới nhất</li>
@@ -525,6 +531,11 @@
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="content__products">
+          <div class="grid container">
+            <div class="row"></div>
           </div>
         </div>
       </main>
