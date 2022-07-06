@@ -1,0 +1,17 @@
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .container {
+    padding: 0 9px;
+  }
+}
