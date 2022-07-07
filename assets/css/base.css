@@ -39,12 +39,16 @@ html {
 
 .tag.tag--hot {
   color: var(--text-color);
-  background-color: var(--primary-yellow-color) !important;
+  background-color: var(--primary-yellow-color);
 }
 
 .tag.tag--new {
   color: var(--white-color);
-  background-color: var(--primary-blue-color) !important;
+  background-color: var(--primary-blue-color);
+}
+
+.tag.tag--normal {
+  text-transform: unset;
 }
 
 .container {
@@ -137,4 +141,22 @@ html {
 
 .select-hidden:checked ~ .select-selected .select-icon {
   transform: rotate(180deg);
+}
+
+/* Review ratings */
+.ratings {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: var(--primary-blue-color);
+}
+
+.ratings i {
+  margin: 0 2px;
+}
+
+.ratings-number {
+  font-size: 1rem;
+  margin-left: 4px;
 }
