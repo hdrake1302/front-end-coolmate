@@ -3,3 +3,4 @@ Todo:
 - navbar search 
 
 - content product -> select slowly disappear when mouse leave
+-header fixed, disappear when scroll
