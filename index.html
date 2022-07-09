@@ -44,6 +44,7 @@
             />
           </a>
           <ul class="header__navbar-list hide-on-mobile-tablet">
+            <div class="header__navbar-list-overlay"></div>
             <li class="header__navbar-item header__navbar-item--active">
               <a href="#" class="header__navbar-item-link">Outlet</a>
             </li>
@@ -387,7 +388,9 @@
 
               <i class="header__navbar-icon fa-solid fa-user"></i>
             </button>
-            <button class="header__navbar-btn header__navbar-btn--has-menu">
+            <button
+              class="header__navbar-btn header__navbar-btn--has-menu header__navbar-btn--no-hover-lt-tablet"
+            >
               <span class="header__navbar-counts">3</span>
               <div class="header__navbar-btn-menu">
                 <div class="header__navbar-cart">
@@ -1394,7 +1397,7 @@
           </div>
         </section>
       </main>
-      <footer class="footer">
+      <footer class="footer hide-on-mobile">
         <div class="container">
           <div class="footer-wrap">
             <div class="footer__menu">
@@ -1653,4 +1656,5 @@
       </footer>
     </div>
   </body>
+  <script src="assets/js/main.js"></script>
 </html>

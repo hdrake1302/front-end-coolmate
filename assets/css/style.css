@@ -28,9 +28,9 @@
 .header__topbar {
   text-align: center;
   background-color: var(--primary-yellow-color);
-  height: var(--topbar-height);
-  line-height: var(--topbar-height);
+  min-height: var(--topbar-height);
 
+  padding: 8px;
   transition: background-color ease-in 0.2s;
 }
 
@@ -38,7 +38,7 @@
   display: inline-block;
   text-decoration: none;
   color: var(--text-color);
-  font-weight: 700;
+  font-weight: 900;
 }
 
 /* Header - Navbar */
@@ -89,8 +89,24 @@
 .header__navbar-list {
   display: flex;
   margin: 0;
-
+  padding: 0;
   list-style-type: none;
+
+  animation: fadeIn ease-in 0.2s;
+}
+
+.header__navbar-list-overlay {
+  content: "";
+  display: none;
+  position: absolute;
+  top: calc(100%);
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: calc(100vh - 100%);
+  background-color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
 }
 
 .header__navbar-item {
@@ -111,6 +127,7 @@
 
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
 }
 
 .header__navbar-item--has-child:hover .submenu {
@@ -253,9 +270,10 @@
 
 .submenu--thumbnail .submenu-wrap {
   max-width: 1200px;
+  padding: 0 15px;
 }
 
-.submenu--thumbnail .submenu__column {
+.submenu--thumbnail .submenu__column:not(:last-child) {
   display: block;
   padding-right: 46px;
 }
@@ -298,6 +316,10 @@
   border: none;
   outline: none;
   padding: 0;
+
+  display: inline-block;
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 .header__navbar-btn:hover {
